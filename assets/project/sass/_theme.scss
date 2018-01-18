@@ -1,0 +1,17 @@
+body {
+    background-color: $bgcolor;
+}
+h1 {
+    font-size: 30px;
+}
+
+p {
+    font-size: 20px;
+}
+
+pre {
+    display: initial;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+}

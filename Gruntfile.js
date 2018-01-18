@@ -7,28 +7,26 @@ module.exports = function(grunt) {
     grunt.initConfig({
         concat: {
             js: {
-                src: ['assets/sass/js/phpcms.js'],
+                src: ['assets/project/js/document.ready.js'],
                 dest: 'assets/js/scripts.js',
+                src: ['assets/project/bower_components/jquery/dist/jquery.min.js'],
+                dest: 'assets/js/jquery.js',
             },
-            css: {
-                src: ['assets/sass/css/main.css', 'assets/sass/css/theme.css'],
-                dest: 'assets/css/styles.css',
-            }
         },
         watch: {
             js: {
-                files: ['assets/sass/js/*.js'],
+                files: ['assets/project/js/*.js'],
                 tasks: ['concat:js'],
             },
             sass: {
-                files: ['assets/sass/css/*.scss'],
+                files: ['assets/project/sass/*.scss'],
                 tasks: ['sass:dist'],
             }
         },
         sass: {
             dist: {
                 files: {
-                    'assets/css/main.css': 'assets/sass/css/main.scss'
+                    'assets/css/main.css': 'assets/project/sass/main.scss'
                 }
             }
         }
